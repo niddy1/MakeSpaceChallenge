@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MakeSpace Challenge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/template" id="todo-template">
+      <li><input class="checkboxes" type="checkbox">  <%= description %></li>
+
+    </script>
+  </head>
+  <body>
+
+    <div id="container">
+      <h2 id="title">To Do List</h2>
+
+      <form class="create-todo" method="post">
+        <input class="form-field" type="text" name="todo[description]" placeholder="..what to do?">
+        <input class="btn" type="submit" value="Add Item">
+      </form>
+
+      <ul id="todo-list"></ul>
+
+      <div id="todo-bottom">
+        <div id="todo-count"></div>
+
+        <a id="todo-check" href="#">Mark all as complete</a>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
+    <script src="js/views/todos.js"></script>
+    <script src ="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+body{
+  background-color: lightblue;
+  font-family: sans-serif;
+}
+
+#container{
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  width: 500px;
+  min-height: 600px;
+  margin: auto;
+
+}
+
+.todo:nth-child(odd){
+  background-color: lightgrey;
+}
+#title{
+  font-size: 45px;
+  text-align: center;
+}
+ul{
+  padding: 0;
+  list-style: none;
+  border-bottom: 2px solid lightgrey;
+}
+
+li{
+  height: 50px;
+  font-size: 22px;
+}
+.checkboxes{
+  margin-top: 18px;
+  margin-left: 10px;
+  font-size: 200%;
+}
+.btn{
+  padding: 0;
+  border: 0;
+  background-color: #5cb85c;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  height: 51px;
+  width: 100px;
+  margin-left: -6px;
+}
+.form-field{
+  height: 45px;
+  width: 70%;
+  font-size: 22px;
+  margin-left: 5%;
+}
+
+#todo-bottom{
+  height: 50px;
+
+}
+#todo-count{
+  padding-top: 6px;
+  margin-left: 10px;
+}
+#todo-check{
+  margin-right: 10px;
+  font-size: 22px;
+  float: right;
+  text-decoration: none;
+  color: #5cb85c;
+  margin-top: -20px;
+}
