@@ -13,15 +13,24 @@ var TodoView = Backbone.View.extend({
     this.bindCheck();
   },
 
+  events:{
+    'click button.remove': 'removeTodo'
+  },
+
   countChecked: function(){
     var n = $( "input:not(:checked)" ).length - 1;
     $( "#todo-count" ).text( "Items left: " + n )
   },
 
+  countCheckedSecond:function(){
+    var n = $( "input:not(:checked)" ).length - 2;
+    $( "#todo-count" ).text( "Items left: " + n )
+  },
+
   bindCheck: function(){
+    var scope = this
     this.$el.find(".checkboxes").on("change", function(){
-      var n = $( "input:not(:checked)" ).length - 2;
-      $( "#todo-count" ).text( "Items left: " + n );
+      scope.countCheckedSecond();
       //strike-through logic
       if (this.checked) {
           $(this).parent().css('text-decoration', 'line-through')
@@ -30,7 +39,14 @@ var TodoView = Backbone.View.extend({
           $(this).parent().css('text-decoration', 'none')
       }
     }
-  )}
+  )},
+
+    removeTodo: function(){
+      var scope = this
+      this.model.destroy();
+      this.$el.remove();
+      scope.countCheckedSecond();
+    }
 });
 
 var TodoListView = Backbone.View.extend({

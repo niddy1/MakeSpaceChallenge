@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#todo-count').html( "Items left: " + 0 );
 
-// Handles "Mark all as complete link"
+// Handles "Mark all as complete" link logic
   $('#todo-check').on('click', function(e){
     e.preventDefault();
     $(".checkboxes").prop('checked', true);

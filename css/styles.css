@@ -1,5 +1,5 @@
 body{
-  background-color: lightblue;
+  background-color: white;
   font-family: sans-serif;
 }
 
@@ -10,20 +10,24 @@ body{
   width: 500px;
   min-height: 600px;
   margin: auto;
-
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.todo:nth-child(odd){
-  background-color: lightgrey;
-}
 #title{
   font-size: 45px;
   text-align: center;
 }
+
 ul{
   padding: 0;
   list-style: none;
   border-bottom: 2px solid lightgrey;
+}
+
+.todo:nth-child(odd){
+  background-color: lightgrey;
 }
 
 li{
@@ -35,6 +39,14 @@ li{
   margin-left: 10px;
   font-size: 200%;
 }
+
+.form-field{
+  height: 45px;
+  width: 70%;
+  font-size: 22px;
+  margin-left: 5%;
+}
+
 .btn{
   padding: 0;
   border: 0;
@@ -48,11 +60,23 @@ li{
   width: 100px;
   margin-left: -6px;
 }
-.form-field{
-  height: 45px;
-  width: 70%;
-  font-size: 22px;
-  margin-left: 5%;
+.btn:hover{
+  cursor: pointer;
+}
+
+.remove{
+  background-color: red;
+  border: 0;
+  border-radius: 50%;
+  float: right;
+  margin-right: 30px;
+  margin-top: 15px;
+  color: red;
+  height: 20px;
+  width: 20px;
+}
+.remove:hover{
+  cursor: pointer;
 }
 
 #todo-bottom{
